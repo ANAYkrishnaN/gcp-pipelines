@@ -12,5 +12,6 @@ steps:
       - 'us-central1-docker.pkg.dev/$PROJECT_ID/nambath100974200/app:$COMMIT_SHA'
 
 options:
-  logging: CLOUD_LOGGING_ONLY
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+
+logsBucket: 'gs://$PROJECT_ID-build-logs'
