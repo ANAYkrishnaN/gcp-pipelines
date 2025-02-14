@@ -3,16 +3,16 @@ steps:
     args:
       - 'build'
       - '-t'
-      - 'us-central1-docker.pkg.dev/premium-griffin-447317-k3/nambath100974200/app:$COMMIT_SHA'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/nambath100974200/app:$COMMIT_SHA'
       - '.'
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'us-central1-docker.pkg.dev/premium-griffin-447317-k3/nambath100974200/app:$COMMIT_SHA'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/nambath100974200/app:$COMMIT_SHA'
 
 options:
   logging: CLOUD_LOGGING_ONLY
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
 
-logsBucket: 'gs://premium-griffin-447317-k3-build-logs'
+logsBucket: 'gs://$PROJECT_ID-build-logs'
