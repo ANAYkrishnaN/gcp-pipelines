@@ -9,9 +9,9 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'us-central1-docker.pkg.dev/$PROJECT_ID/nambath100974200/app:$COMMIT_SHA'
+      - 'us-central1-docker.pkg.dev/My First Project/nambath100974200/app:$COMMIT_SHA'
 
 options:
   logging: CLOUD_LOGGING_ONLY
 
-logsBucket: 'gs://$PROJECT_ID-build-logs'
+logsBucket: 'gs://My First Project-build-logs'
